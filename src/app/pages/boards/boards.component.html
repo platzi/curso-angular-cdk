@@ -59,10 +59,10 @@
 
     <cdk-accordion>
       <cdk-accordion-item #accordionItem="cdkAccordionItem" *ngFor="let item of items">
-        <button class="w-full text-left" type="button" (click)="accordionItem.toggle()">{{ item.label }}</button>
+        <button class="w-full py-1 px-2 flex justify-between items-center" type="button" (click)="accordionItem.toggle()">{{ item.label }}</button>
         <div [style.display]="accordionItem.expanded ? '' : 'none'">
           <ul>
-            <li class="ml-2" *ngFor="let subItem of item.items">{{ subItem.label }}</li>
+            <li class="ml-4" *ngFor="let subItem of item.items">{{ subItem.label }}</li>
           </ul>
         </div>
       </cdk-accordion-item>

@@ -1,0 +1,73 @@
+<div class="flex flex-col h-screen">
+  <app-navbar></app-navbar>
+  <div class="w-full grow bg-sky-600 px-4 pb-4">
+    <div>
+      <h2 class="text-xl font-bold text-white my-4">Demo Board</h2>
+    </div>
+    <div class="flex items-start w-full h-full">
+      <div class="rounded bg-gray-200 w-72 p-2 mr-3">
+        <div class="flex justify-between py-1">
+          <h3 class="text-sm font-bold ml-2">To Do</h3>
+        </div>
+
+        <div class="text-sm mt-2" cdkDropList (cdkDropListDropped)="drop($event)">
+          <div
+            *ngFor="let todo of todos"
+            cdkDrag
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            {{ todo.title }}
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded bg-gray-200 w-72 p-2 mr-3">
+        <div class="flex justify-between py-1">
+          <h3 class="text-sm font-bold ml-2">Doing</h3>
+        </div>
+
+        <div class="text-sm mt-2">
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 1
+          </div>
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 2
+          </div>
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 3
+          </div>
+        </div>
+      </div>
+
+      <div class="rounded bg-gray-200 w-72 p-2 mr-3">
+        <div class="flex justify-between py-1">
+          <h3 class="text-sm font-bold ml-2">Done</h3>
+        </div>
+
+        <div class="text-sm mt-2">
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 1
+          </div>
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 2
+          </div>
+          <div
+            class="bg-white shadow p-2 rounded mt-2 border-b border-x-gray-300 cursor-pointer hover:bg-gray-400"
+          >
+            Task 3
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
