@@ -1,0 +1,36 @@
+<div class="flex flex-col h-screen">
+  <app-navbar></app-navbar>
+  <div class="w-full grow bg-white-600 p-6">
+    <table cdk-table [dataSource]="products">
+      <tr cdk-header-row *cdkHeaderRowDef="columns"></tr>
+      <tr cdk-row *cdkRowDef="let row; columns: columns"></tr>
+
+      <!-- Price Column -->
+      <ng-container cdkColumnDef="price">
+        <th cdk-header-cell *cdkHeaderCellDef>Price</th>
+        <td cdk-cell *cdkCellDef="let row">{{ row.price }}</td>
+      </ng-container>
+
+      <!-- Id Column -->
+      <ng-container cdkColumnDef="#No">
+        <th cdk-header-cell *cdkHeaderCellDef>Id.</th>
+        <td cdk-cell *cdkCellDef="let row">{{ row.id }}</td>
+      </ng-container>
+
+      <!-- Cover Column -->
+      <ng-container cdkColumnDef="cover">
+        <th cdk-header-cell *cdkHeaderCellDef>Cover</th>
+        <td cdk-cell *cdkCellDef="let row">
+          <img class="w-64" [src]="row.images[0]" alt="">
+        </td>
+      </ng-container>
+
+      <!-- Title Column -->
+      <ng-container cdkColumnDef="Name">
+        <th cdk-header-cell *cdkHeaderCellDef>title</th>
+        <td cdk-cell *cdkCellDef="let row">{{ row.title }}</td>
+      </ng-container>
+    </table>
+  </div>
+</div>
+
