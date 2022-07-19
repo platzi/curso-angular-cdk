@@ -56,6 +56,17 @@
         </div>
       </cdk-accordion-item>
     </cdk-accordion>
+
+    <cdk-accordion>
+      <cdk-accordion-item #accordionItem="cdkAccordionItem" *ngFor="let item of items">
+        <button class="w-full text-left" type="button" (click)="accordionItem.toggle()">{{ item.label }}</button>
+        <div [style.display]="accordionItem.expanded ? '' : 'none'">
+          <ul>
+            <li class="ml-2" *ngFor="let subItem of item.items">{{ subItem.label }}</li>
+          </ul>
+        </div>
+      </cdk-accordion-item>
+    </cdk-accordion>
   </div>
   <div class="w-full">
     <h1 class="text-lg font-bold mb-4"><fa-icon [icon]="faClock"></fa-icon> Recently viewed</h1>
