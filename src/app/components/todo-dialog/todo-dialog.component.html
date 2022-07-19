@@ -1,0 +1,39 @@
+<div class="p-6 bg-gray-100 relative rounded shadow">
+  <button (click)="close()" type="button" class="absolute top-3 right-3 focus:outline-none p-2">
+    <fa-icon [icon]="faClose"></fa-icon>
+  </button>
+  <div class="flex space-x-2 mb-5">
+    <fa-icon class="text-gray-800" [icon]="faCheckToSlot"></fa-icon>
+    <div class="flex flex-col">
+      <h3 class="text-lg font-semibold text-gray-800">Task 1</h3>
+      <p class="text-sm text-gray-500">in list ToDo</p>
+    </div>
+  </div>
+  <div class="flex w-full gap-4">
+    <div class="flex space-x-2 mb-5 w-4/6">
+      <fa-icon class="text-gray-800" [icon]="faBars"></fa-icon>
+      <div class="flex flex-col">
+        <h3 class="text-lg font-semibold text-gray-800">Description</h3>
+        <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, hic? Adipisci soluta cum odio, beatae ratione magni nobis, optio similique rerum minus excepturi sed vel, id voluptatibus repellendus numquam quod.</p>
+      </div>
+    </div>
+    <div class="flex flex-auto space-y-2 flex-col">
+      <app-btn typeBtn="button" color="gray-light">
+        <fa-icon class="text-gray-800" [icon]="faUser"></fa-icon>
+        Members
+      </app-btn>
+      <app-btn typeBtn="button" color="gray-light">
+        <fa-icon class="text-gray-800" [icon]="faTag"></fa-icon>
+        Labels
+      </app-btn>
+      <app-btn typeBtn="button" color="gray-light">
+        <fa-icon class="text-gray-800" [icon]="faCheckSquare"></fa-icon>
+        Checklist
+      </app-btn>
+      <app-btn typeBtn="button" color="gray-light">
+        <fa-icon class="text-gray-800" [icon]="faClock"></fa-icon>
+        Dates
+      </app-btn>
+    </div>
+  </div>
+</div>
