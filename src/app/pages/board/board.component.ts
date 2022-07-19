@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 
-import { ToDo } from '../../models/todo.model';
+import { ToDo, Column } from '../../models/todo.model';
 
 @Component({
   selector: 'app-board',
@@ -22,30 +22,43 @@ import { ToDo } from '../../models/todo.model';
 })
 export class BoardComponent implements OnInit {
 
-  todos: ToDo[] = [
+  columns: Column[] = [
     {
-      id: '1',
-      title: 'Make dishes'
+      title: 'ToDo',
+      todos: [
+        {
+          id: '1',
+          title: 'Make dishes'
+        },
+        {
+          id: '2',
+          title: 'Buy a unicorn'
+        }
+      ]
     },
     {
-      id: '2',
-      title: 'Buy a unicorn'
+      title: 'Doing',
+      todos: [
+        {
+          id: '3',
+          title: 'Watch Angular Path in Platzi'
+        }
+      ]
+    },
+    {
+      title: 'Done',
+      todos: [
+        {
+          id: '4',
+          title: 'Play video games'
+        }
+      ]
     }
   ];
 
-  doing: ToDo[] = [
-    {
-      id: '3',
-      title: 'Watch Angular Path in Platzi'
-    }
-  ];
-
-  done: ToDo[] = [
-    {
-      id: '4',
-      title: 'Play video games'
-    }
-  ];
+  todos: ToDo[] = [];
+  doing: ToDo[] = [];
+  done: ToDo[] = [];
 
   constructor() { }
 
@@ -64,6 +77,13 @@ export class BoardComponent implements OnInit {
       );
     }
 
+  }
+
+  addColumn() {
+    this.columns.push({
+      title: 'New Column',
+      todos: [],
+    });
   }
 
 }
