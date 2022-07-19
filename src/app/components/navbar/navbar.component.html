@@ -24,74 +24,34 @@
       </div>
     </div>
     <div class="flex items-center">
-      <button
-        type="button"
-        class="flex rounded-full"
-        aria-expanded="false"
-        type="button"
-        (click)="isOpen = !isOpen"
-        cdkOverlayOrigin
-        #menuOverlay="cdkOverlayOrigin"
-      >
-        <img
-          class="w-8 h-8 rounded-full"
-          src="https://api.lorem.space/image/face?w=400&h=400"
-          alt="user photo"
-        />
-      </button>
+      <div class="flex space-x-2">
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faBell"></fa-icon>
+        </button>
+        <button class="text-white" type="button">
+          <fa-icon [icon]="faInfoCircle"></fa-icon>
+        </button>
+        <button
+          type="button"
+          class="flex rounded-full"
+          aria-expanded="false"
+          type="button"
+          (click)="isOpen = !isOpen"
+          cdkOverlayOrigin
+          #menuOverlay="cdkOverlayOrigin"
+        >
+          <img
+            class="w-8 h-8 rounded-full"
+            src="https://api.lorem.space/image/face?w=400&h=400"
+            alt="user photo"
+          />
+        </button>
+      </div>
     </div>
   </div>
 </nav>
-<p>Hola</p>
-<p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<button
-  type="button"
-  class="flex rounded-full"
-  aria-expanded="false"
-  type="button"
-  (click)="isOpenBody = !isOpenBody"
-  cdkOverlayOrigin
-  #bodyOverlay="cdkOverlayOrigin"
->
-  <img
-    class="w-8 h-8 rounded-full"
-    src="https://api.lorem.space/image/face?w=400&h=400"
-    alt="user photo"
-  />
-</button>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p>
-<p>Hola</p><p>Hola</p>
-<p>Hola</p><p>Hola</p>
 
-<p>Hola</p>
+
 <ng-template
   cdkConnectedOverlay
   [cdkConnectedOverlayOrigin]="menuOverlay"
@@ -153,55 +113,4 @@
       </li>
     </ul>
   </div>
-</ng-template>
-
-<ng-template
-  cdkConnectedOverlay
-  [cdkConnectedOverlayOrigin]="bodyOverlay"
-  [cdkConnectedOverlayOpen]="isOpenBody"
->
-<div
-class="z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
-id="user-dropdown"
->
-<div class="py-3 px-4">
-  <span class="block text-sm text-gray-900 "
-    >Bonnie Green</span
-  >
-  <span
-    class="block text-sm font-medium text-gray-500 truncate "
-    >name@flowbite.com</span
-  >
-</div>
-<ul class="py-1" aria-labelledby="user-menu-button">
-  <li>
-    <a
-      href="#"
-      class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600"
-      >Dashboard</a
-    >
-  </li>
-  <li>
-    <a
-      href="#"
-      class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 "
-      >Settings</a
-    >
-  </li>
-  <li>
-    <a
-      href="#"
-      class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 "
-      >Earnings</a
-    >
-  </li>
-  <li>
-    <a
-      href="#"
-      class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 "
-      >Sign out</a
-    >
-  </li>
-</ul>
-</div>
 </ng-template>
